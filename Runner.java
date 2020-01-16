@@ -1,0 +1,24 @@
+package com.figures;
+
+class Runner {
+    public static void main(String[] args) {
+        Figure[] a = {
+                new Rectangle(2, 10),
+                new Triangle(3, 4, 5),
+                new Circle(2),
+                new Square(5)
+        };
+
+        for (Figure s : a)
+            System.out.println("The area of " + s.getClass().getName() + " is " + s.area());
+    }
+}
+
+
+
+
+
+
+
+
+
