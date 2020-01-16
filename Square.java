@@ -1,13 +1,12 @@
 package com.figures;
 
-
-class Square extends Figure {
-    protected int x;
+class Square extends Rectangle {
     public Square(int x) {
-        this.x = x;
+        super(x, x);
     }
 
+    @Override
     public double area() {
-        return x * x;
+        return super.area();
     }
 }

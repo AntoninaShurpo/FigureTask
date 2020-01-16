@@ -2,15 +2,19 @@ package com.figures;
 
 class Runner {
     public static void main(String[] args) {
-        Figure[] a = {
-                new Rectangle(2, 10),
-                new Triangle(3, 4, 5),
-                new Circle(2),
-                new Square(5)
-        };
+        IFigure figure = new Rectangle(2, 10);
+        print(figure);
+        figure = new Triangle(3, 4,5);
+        print(figure);
+        figure = new Circle(2);
+        print(figure);
+        figure = new Square(5);
+        print(figure);
 
-        for (Figure s : a)
-            System.out.println("The area of " + s.getClass().getName() + " is " + s.area());
+    }
+
+    private static void print(IFigure figure) {
+        System.out.println("The area of " + figure.getClass().getName() + " is " + figure.area());
     }
 }
 

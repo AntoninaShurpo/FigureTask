@@ -1,6 +1,6 @@
 package com.figures;
 
-class Triangle extends Figure {
+class Triangle implements IFigure {
     protected int a, b, c;
     public Triangle(int a, int b, int c) {
         this.a = a;
@@ -8,6 +8,7 @@ class Triangle extends Figure {
         this.c = c;
     }
 
+    @Override
     public double area() {
         double s = (a + b + c) / 2;
         return Math.sqrt(s * (s - a) * (s - b) * (s - c));
